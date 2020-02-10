@@ -7,10 +7,51 @@
              x:Class="RelateITApp.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <StackLayout x:Name="PhoneView">
+            <Button Margin="20,20"
+                        HorizontalOptions="Center"
+                        WidthRequest ="300"
+                        Text="Gem rute"
+                        Clicked="SaveButton_Clicked">
+            </Button>
+            <Button Margin="20,20"
+                        HorizontalOptions="Center"
+                        WidthRequest ="300"
+                        Text="Ændre rute"
+                        Clicked="ChangeRoute_Clicked">
+            </Button>
+        </StackLayout>
+
+
+        <Grid x:Name="TabletView">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"></RowDefinition>
+                <RowDefinition Height="200"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*">
+                </ColumnDefinition>
+                <ColumnDefinition Width="*">
+                </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="0"
+                    Margin="20,20"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="300"
+                    Text="Gem rute"
+                    Clicked="SaveButton_Clicked">
+            </Button>
+            <Button Grid.Row="0" Grid.Column="1"
+                    Margin="20,20"
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center"
+                    WidthRequest="300"
+                    Text="Ændre rute"
+                    Clicked="ChangeRoute_Clicked">
+            </Button>
+        </Grid>
+
     </StackLayout>
 
 </ContentPage>

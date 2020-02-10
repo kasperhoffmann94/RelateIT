@@ -16,6 +16,26 @@ namespace RelateITApp
         public MainPage()
         {
             InitializeComponent();
+            if (Device.Idiom == TargetIdiom.Phone)
+            {
+                PhoneView.IsVisible = true;
+                TabletView.IsVisible = false;
+            }
+            else
+            {
+                PhoneView.IsVisible = false;
+                TabletView.IsVisible = true;
+            }
+        }
+
+
+        private void SaveButton_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChangeRoute_Clicked(object sender, EventArgs e)
+        {
         }
     }
 }
