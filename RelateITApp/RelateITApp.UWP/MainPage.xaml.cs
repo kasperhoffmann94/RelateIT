@@ -17,11 +17,15 @@ namespace RelateITApp.UWP
 {
     public sealed partial class MainPage
     {
+        private readonly string authenticationKey =
+            "NRHTK2peNSMBw6gcSJuW~qIBw5QKFs0sWR72xtTgzJg~AoG283d-lMr4E3BZ_SVS382RhY22uHUjrpnAFQdiNPaduxrTXhSNeMEOQeieuePa";
         public MainPage()
         {
             this.InitializeComponent();
 
             LoadApplication(new RelateITApp.App());
+            Xamarin.FormsMaps.Init(authenticationKey);
+            Windows.Services.Maps.MapService.ServiceToken = authenticationKey;
         }
     }
 }

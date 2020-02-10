@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace RelateITApp
@@ -26,6 +27,12 @@ namespace RelateITApp
                 PhoneView.IsVisible = false;
                 TabletView.IsVisible = true;
             }
+
+            Map map = new Map();
+            Content = map;
+            //MapOdense();
+
+
         }
 
 
@@ -37,5 +44,13 @@ namespace RelateITApp
         private void ChangeRoute_Clicked(object sender, EventArgs e)
         {
         }
+
+        //public async Task MapOdense()
+        //{
+        //    var location = new Location(55.399723, 10.38521);
+        //    var options = new MapLaunchOptions { Name = "Odense" };
+
+        //    await Map.OpenAsync(location, options);
+        //}
     }
 }
